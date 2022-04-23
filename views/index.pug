@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  
+  each mess in messages
+    h1= mess.text
+    p User #{mess.user}
+    p Added on #{mess.added}
